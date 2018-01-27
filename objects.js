@@ -1,10 +1,11 @@
 var playlist = {Adele: 'Skyfall', Zepplin: 'Kashmir'};
 
-function updatePlaylist(playlist, Maiden, Beast){
-  return Object.assign({}, playlist, {'Phil Ochs': "Here's to the State of Mississippi"});
+function updatePlaylist(playlist, artistName, songTitle) {
+  playlist[artistName] = songTitle
+  return playlist
 }
 
-function removeFromPlaylist(playlist, artistName){
-  delete playlist.Kanye
-  return playlist;
+function removeFromPlaylist(playlist, artistName) {
+  delete playlist[artistName]
+  return playlist
 }
